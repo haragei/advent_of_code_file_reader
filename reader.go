@@ -13,22 +13,12 @@ func check(e error) {
 	}
 }
 
-func ReadRealFile() []string {
-	return readFile("./real.input")
+func ReadFile(filename string) []string {
+	return readFile(filename)
 }
 
-func ReadTestFile() []string {
-	return readFile("./test.input")
-}
-
-func ReadRealFileSingleLine(delimiter string) []string {
-	lines := readFile("./real.input")
-
-	return strings.Split(lines[0], delimiter)
-}
-
-func ReadTestFileSingleLine(delimiter string) []string {
-	lines := readFile("./test.input")
+func ReadFileSingleLine(filename string, delimiter string) []string {
+	lines := readFile(filename)
 
 	return strings.Split(lines[0], delimiter)
 }
